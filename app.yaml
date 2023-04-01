@@ -1,0 +1,18 @@
+# What programming language & version!
+# Check that yours is supported here: https://cloud.google.com/appengine/docs
+runtime: python311
+
+# What type of servers to use
+# F1 - low-memory application
+# F4 - high-memory application
+# You can guess the numbers in between
+instance_class: F1
+
+automatic_scaling:
+  # How big and how small you want your application to be
+  min_instances: 1
+  max_instances: 2
+
+  # Some cost-saving tools
+  target_cpu_utilization: 0.85
+  max_idle_instances: 1
